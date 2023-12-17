@@ -26,8 +26,9 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
 
 4. **Setup auto-cpufreq (for LAPTOP)**
 **Disable intel_pstate/amd-pstate and set to acpi-cpufreq**
-**For GRUB** 
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=disable"
+
+   **For GRUB** 
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=disable"
 
    **For SYSTEMD-BOOT**
    vim /boot/loader/entries/arch.conf
