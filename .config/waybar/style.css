@@ -12,7 +12,7 @@
 }
 /* ----------------------------------------------------- * Workspaces * ----------------------------------------------------- */
  #workspaces {
-     background: #c0caf5;
+     background: #ffbcd9;
      margin: 5px 3px 5px 12px;
      padding: 0px 1px;
      border-radius: 15px;
@@ -26,13 +26,13 @@
      border-radius: 15px;
      border: 0px;
      color: #15161e;
-     background-color: #7aa2f7;
+     background-color: #ff879c;
      opacity: 0.5;
      transition: all 0.3s ease-in-out;
 }
  #workspaces button.active {
      color: #15161e;
-     background: #7aa2f7;
+     background: #ff5158;
      border-radius: 15px;
      min-width: 40px;
      transition: all 0.3s ease-in-out;
@@ -40,7 +40,7 @@
 }
  #workspaces button:hover {
      color: #15161e;
-     background: #7aa2f7;
+     background: #f80000;
      border-radius: 15px;
      opacity: 1.0;
 }
