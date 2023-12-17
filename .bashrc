@@ -12,7 +12,7 @@ alias pi='sudo pacman -S'
 alias pr='sudo pacman -R'
 alias prr='sudo pacman -Rns'
 alias vim='nvim'
-alias editthypr='vim ~/.config/hypr/hyprland.conf' 		# Quickly edit your hyprland
+alias edithypr='vim ~/.config/hypr/hyprland.conf' 		# Quickly edit your hyprland
 alias editwaybar='vim ~/.config/waybar/style.css' 		# Qucikly edit your waybar colors
 eval "$(starship init bash)"					# Autostart Starship prompt
 neofetch
