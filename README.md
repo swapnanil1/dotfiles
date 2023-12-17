@@ -13,7 +13,7 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
 ## Install Necessary Applications
 2. **Install the required applications for the Arch Linux with Hyprland setup:**
    ```bash
-   sudo pacman -S --needed alacritty waybar wofi starship swaybg wireplumber polkit-kde-agent \
+   sudo pacman -S --needed ark dolphin breeze-icons alacritty waybar wofi starship swaybg wireplumber polkit-kde-agent \
    xdg-desktop-portal-hyprland brightnessctl ttf-font-awesome pavucontrol bluez bluez-utils blueman \
    network-manager-applet gvfs thunar thunar-archive-plugin timeshift neovim
    
