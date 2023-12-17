@@ -24,6 +24,18 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
    sudo systemctl enable cronie.service
    chmod +x ~/.config/hypr/xdg-portal-hyprland
 
+4. **Setup auto-cpufreq (for LAPTOP)**
+**Disable intel_pstate/amd-pstate and set to acpi-cpufreq**
+**For GRUB** 
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_pstate=disable"
+
+   **For SYSTEMD-BOOT**
+   vim /boot/loader/entries/arch.conf
+   Add "intel_pstate=disable" & "mitigations=off" at the end of options 
+   ```bash
+   yay -S auto-cpufreq
+   sudo auto-cpufreq --install
+   systemctl enable --now auto-cpufreq 
 ## Additional Information
 The repository includes configurations for other applications as well. Feel free to explore and customize them according to your preferences.
 
