@@ -1,6 +1,6 @@
 # ArchLinux & Hyprland (WM) Setup
 
-Welcome to my Arch Linux with Hyprland window manager setup! This repository contains configuration files (dotfiles) for various daily-used applications, including Starship (shell prompt), Alacritty (terminal emulator), Wofi (application launcher), Hypr (window manager), Waybar (top status bar), and more.
+Welcome to my Arch Linux with Hyprland window manager setup! This repository contains configuration files (dotfiles) for various daily-used applications, including Starship (shell prompt), Alacritty (terminal emulator), Wofi (application launcher), Hypr (window manager), Waybar (top status bar), grim&slurp[to take screenshot grim -g "$(slurp)") ] and more ..
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
    ```bash
    sudo pacman -S --needed ark dolphin breeze-icons alacritty waybar wofi starship swaybg wireplumber polkit-kde-agent \
    xdg-desktop-portal-hyprland brightnessctl ttf-font-awesome pavucontrol bluez bluez-utils blueman \
-   network-manager-applet gvfs thunar thunar-archive-plugin timeshift neovim
+   network-manager-applet gvfs thunar thunar-archive-plugin timeshift neovim grim slurp
    
 ## Enable Necessary Startup Services & Set Permissions
 3. **Enable the required services for startup and set up permissions:**
