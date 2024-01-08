@@ -1,0 +1,12 @@
+game:
+  arch: auto
+  exe: /home/ox/Games/Manhunt/Manhunt Multi5/manhunt.exe
+  prefix: /home/ox/Games/Manhunt/prefix
+system:
+  locale: ''
+wine:
+  battleye: false
+  eac: false
+  esync: false
+  fsr: false
+  fsync: true

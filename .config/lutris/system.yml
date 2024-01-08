@@ -1,0 +1,4 @@
+system:
+  disable_compositor: true
+  locale: ''
+  mangohud: true

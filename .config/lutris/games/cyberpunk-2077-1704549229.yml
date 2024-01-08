@@ -1,0 +1,20 @@
+game:
+  arch: win64
+  args: --intro-skip --skipStartScreen --launcher-skip
+  exe: /home/ox/Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe
+  prefix: /home/ox/Games/Cyberpunk 2077/prefix
+system:
+  env:
+    WINEFSYNC: '1'
+  gamescope: false
+  gamescope_game_res: 1920x1080
+  gamescope_output_res: 1280x720
+  locale: ''
+wine:
+  battleye: false
+  eac: false
+  esync: false
+  fsr: true
+  overrides:
+    WINEFSYNC: '1'
+  version: system

@@ -1,0 +1,16 @@
+game:
+  arch: win64
+  exe: /home/ox/Games/Resident Evil 3/re3.exe
+  prefix: /home/ox/Games/Resident Evil 3/Prefix
+system:
+  env:
+    WINEFSYNC: ''
+  locale: ''
+wine:
+  battleye: false
+  eac: false
+  esync: false
+  fsr: false
+  overrides:
+    WINEFSYNC: '1'
+  version: system

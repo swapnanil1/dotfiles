@@ -1,0 +1,50 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 43,
+                "origin_hash": "b929082a39e4583319044bdd853b9a2f"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "n",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 111,
+                "origin_hash": "b929082a39e4583319044bdd853b9a2f"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_BACKSLASH",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 110,
+                "origin_hash": "b929082a39e4583319044bdd853b9a2f"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_HOME",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 102,
+                "origin_hash": "b929082a39e4583319044bdd853b9a2f"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_INSERT",
+        "mapping_type": "key_macro"
+    }
+]

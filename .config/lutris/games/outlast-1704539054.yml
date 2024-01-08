@@ -1,0 +1,13 @@
+game:
+  arch: win64
+  exe: /home/ox/Games/Outlast/OutlastLauncher.exe
+  prefix: /home/ox/Games/Outlast/prefix
+system:
+  gamemode: true
+  locale: ''
+  mangohud: true
+wine:
+  battleye: false
+  eac: false
+  esync: false
+  fsr: false
