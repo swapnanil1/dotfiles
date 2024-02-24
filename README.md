@@ -16,7 +16,13 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
    sudo pacman -S --needed ark dolphin breeze-icons alacritty waybar wofi starship swaybg wireplumber polkit-kde-agent \
    xdg-desktop-portal-hyprland brightnessctl ttf-font-awesome pavucontrol bluez bluez-utils blueman \
    network-manager-applet gvfs thunar thunar-archive-plugin timeshift neovim grim slurp
-   
+   ```
+   For Desktop
+   ```bash
+   sudo pacman -S --needed dunst waybar polkit-kde-agent swaybg ttf-font-awesome ark dolphin breeze-icons \
+   alacritty waybar wofi starship swaybg wireplumber polkit-kde-agent xdg-desktop-portal-hyprland brightnessctl \
+   ttf-font-awesome pavucontrol network-manager-applet gvfs xdg-desktop-portal-wlr
+   ```
 ## Enable Necessary Startup Services & Set Permissions
 3. **Enable the required services for startup and set up permissions:**
    ```bash
