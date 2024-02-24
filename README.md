@@ -44,6 +44,8 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
    sudo auto-cpufreq --install
    systemctl enable --now auto-cpufreq 
 ## Additional Information
+Try using flameshot-git as screenshot tool it works with wayland wm
+
 The repository includes configurations for other applications as well. Feel free to explore and customize them according to your preferences.
 
 Stay tuned for updates, as more configurations may be added in the future.
