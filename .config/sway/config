@@ -49,7 +49,8 @@ set $right l
 
 # Set terminal
 set $term alacritty
-
+# Set Firefox
+set $bro firefox
 # Set app launcher
 set $menu wofi --show=drun --lines=5 --prompt=""
 
@@ -88,7 +89,8 @@ input "6940:7059:Corsair_CORSAIR_KATAR_PRO_Gaming_Mouse" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
-
+    # Start Browser
+    bindsym $mod+c exec $bro
     # Kill focused window
     bindsym $mod+Shift+q kill
 
