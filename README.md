@@ -1,9 +1,22 @@
-# ArchLinux & Hyprland (WM) Setup
+# ArchLinux & Hyprland OR Sway Setup
 
 Welcome to my Arch Linux with Hyprland window manager setup! This repository contains configuration files (dotfiles) for various daily-used applications, including Starship (shell prompt), Alacritty (terminal emulator), Wofi (application launcher), Hypr (window manager), Waybar (top status bar), grim&slurp[to take screenshot grim -g "$(slurp)") ] and more ..
 
-## Getting Started
-
+## Sway Install + Dependencies 
+### Install Sway
+```
+sudo pacman -S --needed swaybg swaylock swayidle waybar wofi dmenu brightnessctl grim slurp pavucontrol foot xorg-xwayland polkit lightdm-gtk-greeter
+```
+### Config lightdm-gtk-greeter
+```
+sudo dpkg-reconfigure lightdm && systemctl daemon-reload
+systemctl enable lightdm.service
+```
+### Required Extras
+```
+sudo pacman -S ttf-font-awesome polkit-kde-agent xorg-xhost xdg-desktop-portal xdg-desktop-portal-wlr thunar thunar-archive-plugin wl-clipboard network-manager-applet gvfs 
+```
+## Hyprland Install + Dependencies
 1. **Clone the Repository and Set Dotfiles**
    ```bash
    git clone https://github.com/swapnanil1/dotfiles  
