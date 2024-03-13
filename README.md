@@ -16,6 +16,10 @@ systemctl enable lightdm.service
 ```
 sudo pacman -S ttf-font-awesome polkit-kde-agent xorg-xhost xdg-desktop-portal xdg-desktop-portal-wlr thunar thunar-archive-plugin wl-clipboard network-manager-applet gvfs 
 ```
+### Added Dynamic Autotiling for sway
+```
+paru -S autotiling
+```
 ## Hyprland Install + Dependencies
 1. **Clone the Repository and Set Dotfiles**
    ```bash
