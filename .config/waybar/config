@@ -35,7 +35,7 @@
     },
 
 //MODULES ON RIGHT
-    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","temperature","temperature#cpu","clock","tray"],
+    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","temperature","temperature#cpu","clock","custom/lock","custom/power","tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -120,6 +120,13 @@
                     "on-scroll-up": "shift_up",
                     "on-scroll-down": "shift_down"
                     }
+    },
+    "custom/lock": {
+        "format": "",
+        "on-click": "swaylock -f -i ~/Pictures/Wallpapers/lockscreen.jpg",
+    },
+     "custom/power":{
+        "format":" ", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'systemctl shutdown'",
     },
     "tray": {
         //"icon-size": 21,
