@@ -5,7 +5,7 @@
     "spacing": 10,
 
 //MODULES ON LEFT
-    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-left": ["sway/workspaces","sway/window","sway/mode"],
     "sway/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
@@ -21,21 +21,47 @@
              "default": ""
          }
      },
+     "sway/window": {
+        "max-length": 50
+    },
     "sway/mode": {
      "format": " {}",
      "max-length": 50,
      "always-on": true,
      "no-mode-message": "No Mode",
     },
-
 //MODULES ON CENTRE
-    "modules-center": ["sway/window"],
-     "sway/window": {
-        "max-length": 50
+    "modules-center": ["clock"],
+    "clock": {
+	"timezone": "Asia/Kolkata",
+        "format": "{:%I:%M%p}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
     },
 
 //MODULES ON RIGHT
-    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","temperature","temperature#cpu","clock","custom/lock","custom/power","tray"],
+    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","temperature","temperature#cpu","custom/lock","custom/power","tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -82,51 +108,24 @@
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        "format-critical": "| GPU {temperatureC}°C {icon}",
-        "format": "| GPU {temperatureC}°C {icon}",
+        "format-critical": "| GPU {temperatureC}°C",
+        "format": "| GPU {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
    "temperature#cpu": {
         "thermal-zone": 1,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
         "critical-threshold": 80,
-        "format-critical": "CPU {temperatureC}°C {icon}",
-        "format": "CPU {temperatureC}°C {icon}",
+        "format-critical": "{icon} CPU {temperatureC}°C |",
+        "format": "{icon} CPU {temperatureC}°C |",
         "format-icons": ["", "", ""]
-    },
-    "clock": {
-	"timezone": "Asia/Kolkata",
-        "format": "| {:%I:%M%p}  ",
-        "format-alt": "| {:%A, %B %d, %Y (%R)}  ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
     },
     "custom/lock": {
         "format": "",
         "on-click": "swaylock -f -i ~/Pictures/Wallpapers/lockscreen.jpg",
     },
      "custom/power":{
-        "format":" ", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'systemctl shutdown'",
+        "format":" |", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'systemctl shutdown'",
     },
     "tray": {
         //"icon-size": 21,
