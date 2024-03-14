@@ -61,7 +61,7 @@
     },
 
 //MODULES ON RIGHT
-    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","temperature","temperature#cpu","custom/lock","custom/power","tray"],
+    "modules-right": ["keyboard-state","idle_inhibitor","pulseaudio","cpu","memory","custom/gpu-usage","temperature","temperature#cpu","custom/lock","custom/power","tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -97,12 +97,17 @@
     },
     "cpu": {
         "interval": 10, 
-        "format": "|  {usage}%",
-        "tooltip": false
+        "format": "|  {usage}%"
     },
     "memory": {
         "interval": 10,
-        "format": " {}%"
+        "format": " {}%"
+    },
+    "custom/gpu-usage": {
+        "exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
+        "format": " {}%",
+        "return-type": "",
+        "interval": 1 
     },
     "temperature": {
         "thermal-zone": 2,
