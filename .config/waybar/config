@@ -125,7 +125,7 @@
         "on-click": "swaylock -f -i ~/Pictures/Wallpapers/lockscreen.jpg",
     },
      "custom/power":{
-        "format":" |", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'systemctl shutdown'",
+        "format":" |", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'swaymsg exec systemctl poweroff'",
     },
     "tray": {
         //"icon-size": 21,
