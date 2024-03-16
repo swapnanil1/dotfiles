@@ -5,9 +5,10 @@ output * bg ~/Pictures/demon3.png fill
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec_always --no-startup-id autotiling
-exec swaync
-exec corectrl
-exec keepassxc
+exec_always --no-startup-id swaync
+exec --no-startup-id corectrl
+exec --no-startup-id /usr/bin/keepassxc
+exec --no-startup-id /usr/bin/flameshot
 ### Visuals
 ##Title Bar Theme
 # Dracula
@@ -51,18 +52,18 @@ set $right l
 # Set terminal
 set $term alacritty
 # Set Firefox
-set $bro firefox
+set $bro brave
 # Set app launcher
-set $menu wofi --show=drun --lines=5 --prompt=""
+set $menu wofi --show=drun --lines=7 --prompt=""
 
 ### Output configuration
 
 ## Set Monitor and Refresh Rate
-output "DP-1" {
-  res 1920x1080@143.998Hz
+output * {
+  res 1920x1080@144.001Hz
   subpixel rgb
   position 0,0
-  adaptive_sync on
+  adaptive_sync off
   max_render_time 1
 }
 ### Idle configuration
@@ -81,12 +82,16 @@ exec swayidle -w \
 ### Input configuration
 
 ## Set Mouse sensitivity & accelaration
-input "6940:7059:Corsair_CORSAIR_KATAR_PRO_Gaming_Mouse" {
-    natural_scroll disabled
-    dwt enabled
-    accel_profile "flat"
-    pointer_accel 0.0 
+input * {
+    accel_profile flat
+    pointer_accel 0.0
 }
+# input "6940:7059:Corsair_CORSAIR_KATAR_PRO_Gaming_Mouse" {
+#     natural_scroll disabled
+#     dwt enabled
+#     accel_profile "flat"
+#     pointer_accel 0.0 
+# }
 
 ### Key bindings
 #
@@ -94,10 +99,13 @@ input "6940:7059:Corsair_CORSAIR_KATAR_PRO_Gaming_Mouse" {
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
     # Start Browser
     bindsym $mod+c exec $bro
-    # Sway Notification Demon swaync'
+
+    # Sway Notification Demon swaync
     bindsym $mod+Shift+n exec swaync-client -t -sw
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
