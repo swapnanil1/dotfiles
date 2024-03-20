@@ -12,9 +12,9 @@
          "warp-on-scroll": false,
          "format": "{name}: {icon}",
          "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
+             "1": "",
+             "2": "",
+             "3": "",
              "4": "",
              "5": "",
              "urgent": "",
@@ -34,7 +34,7 @@
     "modules-center": [""],
 
 //MODULES ON RIGHT
-    "modules-right": ["idle_inhibitor","keyboard-state","pulseaudio","cpu","memory","custom/gpu-usage","temperature","temperature#cpu","network","clock","custom/lock","custom/power","tray"],
+    "modules-right": ["idle_inhibitor","keyboard-state","network","cpu","memory","custom/gpu-usage","temperature","temperature#cpu","clock","pulseaudio","custom/lock","custom/power","tray"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -53,10 +53,10 @@
     },
     "pulseaudio": {
         "scroll-step": 5, // %,
-        "format": "{icon}{volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format": "| {icon}{volume}% {format_source}",
+        "format-bluetooth": "| {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "|  {icon} {format_source}",
+        "format-muted": "|  {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": " ",
         "format-icons": {
@@ -69,7 +69,7 @@
     },
     "cpu": {
         "interval": 10, 
-        "format": "|  {usage}%"
+        "format": " {usage}%"
     },
     "memory": {
         "interval": 10,
@@ -141,9 +141,10 @@
     },
      "custom/power":{
 	"tooltip": false,
-        "format":" |", "on-click":"swaynag -t warning -m 'Power Menu Options' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'swaymsg exec systemctl poweroff'"
+        "format":" |", "on-click":"swaynag -t warning -m 'Power Menu Options | Remember to Switch Off your Keyboard after Shutdown' -b 'Restart' 'swaymsg exec systemctl reboot' -b 'Shutdown' 'swaymsg exec systemctl poweroff'"
     },
     "tray": {
+        //"icon-size": 21,
         "spacing": 10
     },
 }
