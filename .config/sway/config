@@ -1,5 +1,5 @@
 ## Set Wallpaper
-output * bg ~/Pictures/demon3.png fill
+output * bg ~/Pictures/Wallpapers/skycrpink.jpg fill
 
 ### Autostart
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1 &
@@ -53,6 +53,8 @@ set $right l
 set $term alacritty
 # Set Firefox
 set $bro brave
+# Set File Manager 
+set $file thunar
 # Set app launcher
 set $menu wofi --show=drun --lines=7 --prompt=""
 
@@ -97,14 +99,23 @@ input * {
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
+    ## CUSTOM KEYBINDS
     # Start Browser
     bindsym $mod+c exec $bro
 
+    # Start File Manager
+    bindsym $mod+x exec $file
+
     # Sway Notification Demon swaync
     bindsym $mod+Shift+n exec swaync-client -t -sw
+
+    # Setting side mouse button to mute mic using --whole-window | quickly disable mic
+    bindsym --whole-window button8 exec \
+    wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+    ## Stock KEYBINDS
+    # Start a terminal
+    bindsym $mod+Return exec $term
 
     # Kill focused window
     bindsym $mod+Shift+q kill
