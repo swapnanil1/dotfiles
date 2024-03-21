@@ -5,7 +5,7 @@ Welcome to my Arch Linux with Hyprland window manager setup! This repository con
 ## Sway Install + Dependencies 
 ### Install Sway
 ```
-sudo pacman -S --needed swaybg swaylock swayidle waybar wofi dmenu brightnessctl grim slurp pavucontrol foot xorg-xwayland polkit lightdm-gtk-greeter
+sudo pacman -S --needed swaybg swaylock swayidle waybar wofi dmenu brightnessctl grim slurp pavucontrol foot xorg-xwayland polkit lightdm lightdm-slick-greeter
 ```
 ### Config lightdm-gtk-greeter
 ```
