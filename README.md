@@ -14,8 +14,10 @@ systemctl enable lightdm.service
 ```
 ### Required Extras
 ```
-sudo pacman -S ttf-font-awesome polkit-kde-agent xorg-xhost xdg-desktop-portal xdg-desktop-portal-wlr thunar thunar-archive-plugin wl-clipboard network-manager-applet gvfs 
+sudo pacman -S ttf-font-awesome polkit-kde-agent xorg-xhost xdg-desktop-portal xdg-desktop-portal-wlr wl-clipboard network-manager-applet gvfs 
 ```
+### File Managers
+```thunar thunar-archive-plugin```
 ### Dynamic Autotiling for sway & notification deamon 
 ```
 paru -S autotiling swaync
